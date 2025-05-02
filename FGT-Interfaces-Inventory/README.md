@@ -6,8 +6,6 @@
 
 This tool is particularly useful for network administrators and engineers who need to audit or document Fortigate device configurations in a structured, machine-readable format.
 
----
-
 ## 🧰 Features
 
 - Parses interface definitions from `show system interface` output
@@ -16,14 +14,12 @@ This tool is particularly useful for network administrators and engineers who ne
 - Supports static and BGP routes, including recursive and directly connected paths
 - Outputs a clean, structured CSV file linking interfaces and their routes
 
----
 
 ## 📦 Requirements
 
 - Python 3.6 or higher  
 - No external dependencies (uses only Python standard library)
 
----
 
 ## 📁 Input Files
 
@@ -44,7 +40,6 @@ You will need two CLI output files from your Fortigate firewall(s):
 
 Save these files as `fortigate_config.txt` and `fortigate_route.txt`, or choose your own names and pass them as arguments to the script.
 
----
 
 ## ▶️ Usage
 
@@ -60,7 +55,6 @@ python fgtrules.py fortigate_config.txt fortigate_route.txt inventory.csv
 
 This will produce a CSV file (`inventory.csv`) containing merged data from interfaces and routes.
 
----
 
 ## 🧪 Example Output Columns
 
@@ -85,7 +79,6 @@ The output CSV file contains the following fields:
 | LAG           | If part of LAG, the associated interface   |
 | IPv6          | IPv6 address if present                    |
 
----
 
 ## ⚠️ Notes
 
@@ -93,27 +86,14 @@ The output CSV file contains the following fields:
 * This script uses regular expressions to match and extract values — ensure that CLI output formatting has not been altered.
 * `[DEBUG]` print statements are included for visibility into matching logic.
 
----
 
 ## 👨‍💻 Author
 
 **0xmr-cy**
 GitHub: [https://github.com/0xmr-cy](https://github.com/0xmr-cy)
 
----
 
 ## 🪪 License
 
 This project is licensed under the **GNU General Public License v3.0**
 See [LICENSE](https://www.gnu.org/licenses/gpl-3.0.en.html) for more details.
-
----
-
-## 📆 Version History
-
-* **v1.3 - 25/04/2025**
-
-  * Improved BGP route matching
-  * Added IPv6 support
-  * Enhanced debug output
-
