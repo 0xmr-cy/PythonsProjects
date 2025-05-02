@@ -5,7 +5,7 @@ Welcome to my personal repository of Python scripts, utilities, and tools for au
 ## 📁 Structure
 
 The repository is organized into folders by topic or use case. Each folder contains one or more standalone Python scripts, each with its own documentation and license header.
-> Each folder contains a local `README.md` with usage instructions and details.
+Each folder contains a local `README.md` with usage instructions and details.
 
 ## ⚙️ Requirements
 
