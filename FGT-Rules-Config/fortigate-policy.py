@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Name        : fgtrules.py
+Name        : fortigate-policy.py
 Description : Script allowing the transposition of Fortinet rules from an export config file in a CSV file 
 Autor       : 0xmr-cy
-Date        : 28/04/2025
-Version     : 1.1
+Date        : 02/04/2025
+Version     : 1.0
 License     : GNU General Public License v3.0
 
 Copyright (c) 2025 0xmr-cy
