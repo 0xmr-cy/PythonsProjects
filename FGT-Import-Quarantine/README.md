@@ -4,21 +4,39 @@ This Python script allows you to automatically add IP addresses to quarantine on
 
 ## Features
 
-SSH Connectivity: Connect to FortiGate devices using SSH with customizable username, password, and IP address.
-VDOM Support: Supports FortiGate VDOM (Virtual Domain) configuration. You can specify the VDOM you wish to apply the commands to, or skip it if not needed.
-Batch IP Quarantine: The script reads IP addresses from a text file and executes the quarantine command on each IP address, blocking potential threats.
-Usage
+- **SSH Connectivity**:  
+  Connect to FortiGate devices using SSH with customizable username, password, and IP address.
+  
+- **VDOM Support**:  
+  Supports FortiGate VDOM (Virtual Domain) configuration. You can specify the VDOM you wish to apply the commands to, or skip it if not needed.
+
+- **Batch IP Quarantine**:  
+  The script reads IP addresses from a text file and executes the quarantine command on each IP address, blocking potential threats.
+
+## Usage
 
 To run the script, use the following command:
-
+```bash
 python push_commands.py --ip <device_ip> --username <ssh_username> --password <ssh_password> --vdom <vdom_name> --file <ip_file.txt>
-Arguments:
---ip: Required. The IP address of the FortiGate device you want to connect to.
---username: Required. Your SSH username for the FortiGate device.
---password: Required. Your SSH password for the FortiGate device.
---vdom: Optional. The name of the VDOM you want to configure. If omitted, the script will configure the global settings.
---file: Optional. The path to a text file containing a list of IP addresses to quarantine. Default is adresses_ip.txt.
+```
+### Arguments:
 
+- `--ip`: **Required**  
+  The IP address of the FortiGate device you want to connect to.
+
+- `--username`: **Required**  
+  Your SSH username for the FortiGate device.
+
+- `--password`: **Required**  
+  Your SSH password for the FortiGate device.
+
+- `--vdom`: **Optional**  
+  The name of the VDOM you want to configure. If omitted, the script will configure the global settings.
+
+- `--file`: **Optional**  
+  The path to a text file containing a list of IP addresses to quarantine. Default is `adresses_ip.txt`.
+
+  
 ## Important Notes
 
 FortiOS Versions Before 7.2:
