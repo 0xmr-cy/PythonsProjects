@@ -66,7 +66,7 @@ This script is distributed under the GNU General Public License v3.0.
 See LICENSE for more details.
 
 ## Points to Keep in Mind
-Ensure you have access to the FortiGate device via SSH.
-Always test on a non-production device before applying changes to live systems.
-Make sure you have the correct permissions to execute quarantine commands on the FortiGate device.
-For older versions of FortiOS (pre-7.2), ensure the script is updated as described above.
+- Ensure you have access to the FortiGate device via SSH.
+- Always test on a non-production device before applying changes to live systems.
+- Make sure you have the correct permissions to execute quarantine commands on the FortiGate device.
+- For older versions of FortiOS (pre-7.2), ensure the script is updated as described above.
