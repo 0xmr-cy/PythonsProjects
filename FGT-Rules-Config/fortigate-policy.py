@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Name        : fgtrules.py
-Description : Script allowing the transposition of Fortinet rules into JSON export in a CSV file 
+Description : Script allowing the transposition of Fortinet rules from an export config file in a CSV file 
 Autor       : 0xmr-cy
 Date        : 28/04/2025
 Version     : 1.1
@@ -15,19 +15,19 @@ import sys
 import re
 import csv
 
-# Fichier de sortie
+# Output file
 output = "policies-out2.csv"
 
-# Dictionnaires pour stocker les politiques et les clés vues
+# Dictionaries to store policies and view keys
 policies = {}
 seen_keys = set()
 order_keys = []
 
-# Flags et compteurs
+# Flags and counters
 in_policy_block = False
 policyid = None
 
-# Lire depuis le fichier passé en argument
+# Read from the file passed as an argument
 if len(sys.argv) < 2:
     print("Usage: python fortigate.py policy-conf.txt")
     sys.exit(1)
@@ -58,13 +58,13 @@ with open(input_file, 'r') as infile:
         elif re.match(r'^config firewall policy', line, re.IGNORECASE):
             in_policy_block = True
 
-# Écriture dans le fichier CSV
-with open(output, 'w', newline='') as outfile:
+# Writing to the CSV file
+    with open(output, 'w', newline='') as outfile:
     writer = csv.writer(outfile)
-    # Écriture de l'en-tête
+    # Writing the header
     writer.writerow(['id'] + order_keys)
 
-    # Écriture des politiques
+    # Writing policies
     for policy_id in sorted(policies.keys()):
         row = [policy_id]
         for key in order_keys:
