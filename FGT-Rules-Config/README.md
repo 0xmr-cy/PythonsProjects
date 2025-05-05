@@ -18,17 +18,17 @@ python fortigate.py policy-conf.txt
 
 Replace policy-conf.txt with the path to your FortiGate configuration file.
 
-##Output
+## Output
 
 The output file policies-out2.csv will contain:
 
 A header row with id followed by all detected policy keys (e.g. srcintf, dstintf, action, etc.).
 One line per policy, with values extracted from the configuration.
 
-##Example
+## Example
 
 Given a FortiGate config snippet like:
-
+```bash
 config firewall policy
     edit 1
         set srcintf "port1"
@@ -41,12 +41,14 @@ config firewall policy
         set action deny
     next
 end
+```
+
 The resulting CSV will look like:
 
 id,srcintf,dstintf,action
 1,port1,port2,accept
 2,port3,port4,deny
 
-##License
+## License
 
 This project is licensed under the GNU General Public License v3.0 - see the LICENSE file for details.
