@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Name        : fgtrules.py
+Name        : int-inventory.py
 Description : Script to inventory the interfaces and routes of a Fortigate
 Autor       : 0xmr-cy
 Date        : 25/04/2025
