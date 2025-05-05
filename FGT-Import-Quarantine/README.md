@@ -17,7 +17,7 @@ This Python script allows you to automatically add IP addresses to quarantine on
 
 To run the script, use the following command:
 ```bash
-python push_commands.py --ip <device_ip> --username <ssh_username> --password <ssh_password> --vdom <vdom_name> --file <ip_file.txt>
+python importe-quarantine.py --ip <device_ip> --username <ssh_username> --password <ssh_password> --vdom <vdom_name> --file <ip_file.txt>
 ```
 ### Arguments:
 
