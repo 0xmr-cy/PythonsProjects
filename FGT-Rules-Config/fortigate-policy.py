@@ -1,3 +1,16 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Name        : fgtrules.py
+Description : Script allowing the transposition of Fortinet rules into JSON export in a CSV file 
+Autor       : 0xmr-cy
+Date        : 28/04/2025
+Version     : 1.1
+License     : GNU General Public License v3.0
+
+Copyright (c) 2025 0xmr-cy
+"""
+
 import sys
 import re
 import csv
