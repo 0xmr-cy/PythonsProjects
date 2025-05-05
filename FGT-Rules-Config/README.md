@@ -45,9 +45,11 @@ end
 
 The resulting CSV will look like:
 
-id,srcintf,dstintf,action
-1,port1,port2,accept
-2,port3,port4,deny
+| id | srcintf | dstintf | action |
+|----|---------|---------|--------|
+| 1  | port1   | port2   | accept |
+| 2  | port3   | port4   | deny   |
+
 
 ## License
 
