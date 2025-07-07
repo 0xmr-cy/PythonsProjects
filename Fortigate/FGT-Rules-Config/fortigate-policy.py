@@ -59,7 +59,7 @@ with open(input_file, 'r') as infile:
             in_policy_block = True
 
 # Writing to the CSV file
-    with open(output, 'w', newline='') as outfile:
+with open(output, 'w', newline='') as outfile:
     writer = csv.writer(outfile)
     # Writing the header
     writer.writerow(['id'] + order_keys)
